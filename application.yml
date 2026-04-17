@@ -1,8 +1,6 @@
 server:
-  port: 8080
+  port: ${PORT:10000}
   address: 0.0.0.0
-  http2:
-    enabled: true
 
 lavalink:
   server:
@@ -18,10 +16,10 @@ lavalink:
     filters:
       volume: true
       equalizer: true
-    bufferDurationMs: 600 # Increased for 0.1 vCPU stability
+    bufferDurationMs: 600 # Increased for free tier stability
     frameBufferDurationMs: 5000
-    opusEncodingQuality: 0 # Lowest quality (0-10) to save CPU
-    resamplingQuality: LOW # Saves CPU
+    opusEncodingQuality: 0 # Save CPU
+    resamplingQuality: LOW
     trackStuckThresholdMs: 10000
     useSeekGhosting: true
     youtubePlaylistLoadLimit: 6
