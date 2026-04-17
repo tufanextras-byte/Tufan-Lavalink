@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  address: 0.0.0.0
+  http2:
+    enabled: true
+
+lavalink:
+  server:
+    password: "youshallnotpass"
+    sources:
+      youtube: true
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+    filters:
+      volume: true
+      equalizer: true
+    bufferDurationMs: 600 # Increased for 0.1 vCPU stability
+    frameBufferDurationMs: 5000
+    opusEncodingQuality: 0 # Lowest quality (0-10) to save CPU
+    resamplingQuality: LOW # Saves CPU
+    trackStuckThresholdMs: 10000
+    useSeekGhosting: true
+    youtubePlaylistLoadLimit: 6
+    playerUpdateInterval: 5
+    youtubeSearchEnabled: true
+    soundcloudSearchEnabled: true
+    scSearchExpirationStep: 600000
+
+logging:
+  level:
+    root: INFO
+    lavalink: INFO
